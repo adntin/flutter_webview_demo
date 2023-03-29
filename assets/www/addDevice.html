@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Device</title>
+    <script>
+      window.addEventListener("load", (event) => {
+        const element = document.createElement("pre");
+        const text = document.createTextNode(
+          JSON.stringify(performance.timing, 2, "  ")
+        );
+        element.appendChild(text);
+        document.body.append(element);
+        document.getElementById("btn1").onclick = function () {
+          LDSWebView.postMessage("productType.html");
+        };
+        document.getElementById("btn2").onclick = function () {
+          LDSWebView.postMessage(
+            JSON.stringify({ url: "productType.html", title: "Product Type" })
+          );
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Product Category</h1>
+    <p class="item">Surveillance</p>
+    <p class="item">Lighting & Control</p>
+    <p class="item">Security</p>
+    <p class="item">Lifestyle</p>
+    <p class="item">Surveillance</p>
+    <p class="item">Lighting & Control</p>
+    <p class="item">Security</p>
+    <p class="item">Lifestyle</p>
+    <button id="btn1">Web open WebView1</button>
+    <button id="btn2">Web open WebView2</button>
+  </body>
+</html>

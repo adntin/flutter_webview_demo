@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Copyright 2013 The Flutter Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Load file or HTML string example</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script>
+      window.onload = function () {
+        document.getElementById("btn1").onclick = function () {
+          LDSToaster.postMessage("这是一个 Toaster 示例");
+        };
+        document.getElementById("btn2").onclick = function () {
+          LDSNavigator.postMessage("/Home");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Local demo page 12345</h1>
+    <p>
+      This is an example page used to demonstrate how to load a local file or
+      HTML string using the
+      <a href="https://pub.dev/packages/webview_flutter">Flutter webview</a>
+      plugin.
+    </p>
+    <button id="btn1">Flutter Toaster</button>
+    <button id="btn2">Flutter Navigator</button>
+  </body>
+</html>
